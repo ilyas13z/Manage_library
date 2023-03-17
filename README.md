@@ -1,7 +1,7 @@
 # Manage_library
 library management software
 
-[![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Python: 3](https://img.shields.io/badge/python-3-blue.svg)](https://www.python.org/)
+[![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Python: 3](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/)
 
 ## Использование
 * Клонируем [репозиторий](https://github.com/ilyas13z/Manage_library)
