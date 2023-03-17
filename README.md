@@ -13,9 +13,10 @@ git clone https://github.com/ilyas13z/Manage_library.git
 cd Manage_library
 pip install -r requirements.txt
 ```
-* Запускаем приложение с помощью файла main.py
+* Запускаем приложение с помощью файла final project/function_base.py
 ```shell
-python3 main.py
+cd final project
+python3 function_base.py
 ``` 
 
 ## Автор
