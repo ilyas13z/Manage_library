@@ -8,14 +8,22 @@ library management software
 ```shell
 git clone https://github.com/ilyas13z/Manage_library.git
 ```
-* Переходим в каталог репозитория и устанавливаем зависимости
+* Переходим в каталог репозитория
 ```shell
 cd Manage_library
+```
+* Создаём виртуальное окружение и активируем его
+```shell
+python3 -m venv venv
+source venv/bin/activate
+```
+* Устанавливаем зависимости
+```shell
 pip install -r requirements.txt
 ```
 * Запускаем приложение с помощью файла final project/function_base.py
 ```shell
-cd final project
+cd "final project"
 python3 function_base.py
 ``` 
 

@@ -57,6 +57,6 @@ class Ui_RentaAddBooks(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_name_reader_rental.setText(_translate("MainWindow", "Имя читателя"))
-        self.btn_rental_book.setText(_translate("MainWindow", "Продлить/добавить в прокат на 15 дней"))
+        self.btn_rental_book.setText(_translate("MainWindow", "Продлить/добавить в прокат на 30 дней"))
         self.label_name_book_rental.setText(_translate("MainWindow", "Название книги"))
 

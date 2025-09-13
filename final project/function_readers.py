@@ -35,7 +35,7 @@ class ReaderForm(QWidget, Ui_ReadersList):
                     self.readers_table.setItem(
                         i, 1, QTableWidgetItem(row[1]))
                 else:
-                    date_check = datetime.today() - timedelta(days=15)
+                    date_check = datetime.today() - timedelta(days=30)
                     self.readers_table.setItem(i, 2, QTableWidgetItem(row[2]))
                     if datetime.strptime(row[2], '%d-%m-%Y') >= date_check:
                         self.readers_table.item(i, 2).setBackground(QColor('green'))

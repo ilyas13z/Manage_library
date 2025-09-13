@@ -62,7 +62,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Продлить/добавить в прокат на 15 дней</string>
+     <string>Продлить/добавить в прокат на 30 дней</string>
     </property>
    </widget>
    <widget class="QComboBox" name="box_books_rental">
