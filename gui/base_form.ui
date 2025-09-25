@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>801</width>
-    <height>600</height>
+    <width>900</width>
+    <height>650</height>
    </rect>
   </property>
   <property name="font">
@@ -16,113 +16,227 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Управление мини библиотекой</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>70</y>
-      <width>801</width>
-      <height>391</height>
-     </rect>
+   <layout class="QVBoxLayout" name="mainVerticalLayout">
+    <property name="spacing">
+     <number>20</number>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="btn_catalog">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="text">
-        <string>Каталог</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btn_readers">
-       <property name="text">
-        <string>Посмотреть читателей</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btn_add_readers">
-       <property name="text">
-        <string>Добавить читателей</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btn_add_book">
-       <property name="text">
-        <string>Добавить книгу</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btn_rental_books">
-       <property name="text">
-        <string>Продлить/добавить в прокат книгу</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>470</y>
-      <width>801</width>
-      <height>80</height>
-     </rect>
+    <property name="leftMargin">
+     <number>20</number>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QPushButton" name="btn_del_book_for_reader">
-       <property name="text">
-        <string>Удалить у читателя книгу с проката</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="btn_del_book">
-       <property name="text">
-        <string>Удалить книгу</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>1</x>
-      <y>6</y>
-      <width>801</width>
-      <height>51</height>
-     </rect>
+    <property name="topMargin">
+     <number>20</number>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>27</pointsize>
-     </font>
+    <property name="rightMargin">
+     <number>20</number>
     </property>
-    <property name="text">
-     <string>Управление мини библиотекой</string>
+    <property name="bottomMargin">
+     <number>20</number>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <pointsize>32</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Управление мини библиотекой</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="styleSheet">
+       <string>color: #2d3e50; background: #eaf6fb; border-radius: 10px; padding: 15px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="topSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="centeringHorizontalLayout">
+      <item>
+       <spacer name="leftSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="buttonsVerticalLayout">
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="btn_catalog">
+          <property name="text">
+           <string>📚 Каталог</string>
+          </property>
+          <property name="minimumHeight">
+           <number>50</number>
+          </property>
+          <property name="minimumWidth">
+           <number>400</number>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: #b3e5fc; font-size: 18px; border-radius: 8px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_readers">
+          <property name="text">
+           <string>👥 Посмотреть читателей</string>
+          </property>
+          <property name="minimumHeight">
+           <number>50</number>
+          </property>
+          <property name="minimumWidth">
+           <number>400</number>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: #ffe082; font-size: 18px; border-radius: 8px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_add_readers">
+          <property name="text">
+           <string>➕ Добавить читателей</string>
+          </property>
+          <property name="minimumHeight">
+           <number>50</number>
+          </property>
+          <property name="minimumWidth">
+           <number>400</number>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: #c8e6c9; font-size: 18px; border-radius: 8px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_add_book">
+          <property name="text">
+           <string>➕ Добавить книгу</string>
+          </property>
+          <property name="minimumHeight">
+           <number>50</number>
+          </property>
+          <property name="minimumWidth">
+           <number>400</number>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: #d1c4e9; font-size: 18px; border-radius: 8px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_rental_books">
+          <property name="text">
+           <string>🔄 Продлить/добавить в прокат книгу</string>
+          </property>
+          <property name="minimumHeight">
+           <number>50</number>
+          </property>
+          <property name="minimumWidth">
+           <number>400</number>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: #ffccbc; font-size: 18px; border-radius: 8px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_del_book_for_reader">
+          <property name="text">
+           <string>❌ Удалить у читателя книгу с проката</string>
+          </property>
+          <property name="minimumHeight">
+           <number>50</number>
+          </property>
+          <property name="minimumWidth">
+           <number>400</number>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: #ffcdd2; font-size: 18px; border-radius: 8px;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_del_book">
+          <property name="text">
+           <string>🗑️ Удалить книгу</string>
+          </property>
+          <property name="minimumHeight">
+           <number>50</number>
+          </property>
+          <property name="minimumWidth">
+           <number>400</number>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: #b0bec5; font-size: 18px; border-radius: 8px;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="rightSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <spacer name="bottomSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>801</width>
+     <width>900</width>
      <height>24</height>
     </rect>
    </property>
