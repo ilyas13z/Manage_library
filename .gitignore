@@ -63,3 +63,6 @@ dmypy.json
 
 # Local env files
 *.env
+
+#My files
+pyuic-1/

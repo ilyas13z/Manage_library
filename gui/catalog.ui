@@ -6,50 +6,312 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>992</width>
-    <height>593</height>
+    <width>940</width>
+    <height>650</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Каталог библиотеки</string>
+  </property>
+  <property name="styleSheet">
+   <string>QWidget {
+    background-color: #f5f5f5;
+   }
+   QTableWidget {
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    gridline-color: #e0e0e0;
+    font-size: 12px;
+   }
+   QTableWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #f0f0f0;
+   }
+   QTableWidget::item:selected {
+    background-color: #e3f2fd;
+    color: #1976d2;
+   }
+   QHeaderView::section {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+   }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="catalog_table">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>971</width>
-      <height>491</height>
-     </rect>
+   <layout class="QVBoxLayout" name="mainVerticalLayout">
+    <property name="spacing">
+     <number>15</number>
     </property>
-   </widget>
-   <widget class="QPushButton" name="btn_search">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>10</y>
-      <width>161</width>
-      <height>31</height>
-     </rect>
+    <property name="leftMargin">
+     <number>20</number>
     </property>
-    <property name="text">
-     <string>Искать</string>
+    <property name="topMargin">
+     <number>20</number>
     </property>
-   </widget>
-   <widget class="QLineEdit" name="search">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>801</width>
-      <height>31</height>
-     </rect>
+    <property name="rightMargin">
+     <number>20</number>
     </property>
-    <property name="text">
-     <string/>
+    <property name="bottomMargin">
+     <number>20</number>
     </property>
-   </widget>
+    <item>
+     <widget class="QLabel" name="title_label">
+      <property name="font">
+       <font>
+        <pointsize>24</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>📚 Каталог библиотеки</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="styleSheet">
+       <string>color: #2d3e50; background: #eaf6fb; border-radius: 10px; padding: 15px; margin-bottom: 10px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="searchHorizontalLayout">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item>
+       <widget class="QLineEdit" name="search">
+        <property name="minimumHeight">
+         <number>40</number>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="placeholderText">
+         <string>🔍 Введите название книги, автора или жанр для поиска...</string>
+        </property>
+        <property name="styleSheet">
+         <string>QLineEdit {
+          background-color: white;
+          border: 2px solid #e0e0e0;
+          border-radius: 20px;
+          padding: 8px 15px;
+          font-size: 14px;
+         }
+         QLineEdit:focus {
+          border-color: #2196f3;
+          background-color: #fafafa;
+         }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_search">
+        <property name="minimumHeight">
+         <number>40</number>
+        </property>
+        <property name="minimumWidth">
+         <number>120</number>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>🔍 Искать</string>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+          background-color: #2196f3;
+          color: white;
+          border: none;
+          border-radius: 20px;
+          padding: 10px 20px;
+          font-size: 14px;
+          font-weight: bold;
+         }
+         QPushButton:hover {
+          background-color: #1976d2;
+         }
+         QPushButton:pressed {
+          background-color: #1565c0;
+         }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_clear">
+        <property name="minimumHeight">
+         <number>40</number>
+        </property>
+        <property name="minimumWidth">
+         <number>100</number>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>❌ Сброс</string>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+          background-color: #ff5722;
+          color: white;
+          border: none;
+          border-radius: 20px;
+          padding: 10px 15px;
+          font-size: 14px;
+          font-weight: bold;
+         }
+         QPushButton:hover {
+          background-color: #e64a19;
+         }
+         QPushButton:pressed {
+          background-color: #d84315;
+         }</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="catalog_table">
+      <property name="minimumHeight">
+       <number>400</number>
+      </property>
+      <property name="minimumWidth">
+       <number>900</number>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="bottomButtonsLayout">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item>
+       <spacer name="leftBottomSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_refresh">
+        <property name="minimumHeight">
+         <number>45</number>
+        </property>
+        <property name="minimumWidth">
+         <number>140</number>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>🔄 Обновить</string>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+          background-color: #4caf50;
+          color: white;
+          border: none;
+          border-radius: 22px;
+          padding: 12px 20px;
+          font-size: 14px;
+          font-weight: bold;
+         }
+         QPushButton:hover {
+          background-color: #45a049;
+         }
+         QPushButton:pressed {
+          background-color: #3d8b40;
+         }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_back">
+        <property name="minimumHeight">
+         <number>45</number>
+        </property>
+        <property name="minimumWidth">
+         <number>140</number>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>⬅️ Назад</string>
+        </property>
+        <property name="styleSheet">
+         <string>QPushButton {
+          background-color: #9e9e9e;
+          color: white;
+          border: none;
+          border-radius: 22px;
+          padding: 12px 20px;
+          font-size: 14px;
+          font-weight: bold;
+         }
+         QPushButton:hover {
+          background-color: #757575;
+         }
+         QPushButton:pressed {
+          background-color: #616161;
+         }</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="rightBottomSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
